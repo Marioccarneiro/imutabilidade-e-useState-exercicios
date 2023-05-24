@@ -17,23 +17,60 @@ function App() {
   
 
   // Para fazer seus próximos pokemons, crie novos estados ultilizando como referência o objeto abaixo:
-  /*{
+
+
+  const [squirtle, setSquirtle] = useState({
+
+    name: "Squirtle",
+    type: "Water",
+    evolved: false,
+    weight: 9,
+    color: 'blue',
+    image: 'https://archives.bulbagarden.net/media/upload/thumb/5/54/0007Squirtle.png/250px-0007Squirtle.png',
+    id: 7
+    
+  })
+  
+  const evolucaoSquirtle = {
+    
+    name: "Wartortle",
+    type: "Water",
+    evolved: true,
+    weight: 22.5,
+    color: 'blue',
+    image: 'https://archives.bulbagarden.net/media/upload/thumb/0/0f/0008Wartortle.png/250px-0008Wartortle.png',
+    id: 8
+  }
+
+  const [pichu, setPichu] = useState({
+
     name: "Pichu",
-    type: "Electric",
+    type: "Eletric",
     evolved: false,
     weight: 2,
     color: 'yellow',
-    image: 'https://archives.bulbagarden.net/media/upload/archive/f/f3/20130810070434%210172Pichu.png',
-    id: 0
+    image: 'https://archives.bulbagarden.net/media/upload/thumb/f/f3/0172Pichu.png/250px-0172Pichu.png',
+    id: 172
+    
+  })
+
+  const evolucaoPichu = {
+    name: "Picachu",
+    type: "Eletric",
+    evolved: true,
+    weight: 6,
+    color: 'yellow',
+    image: 'https://archives.bulbagarden.net/media/upload/thumb/4/4a/0025Pikachu.png/250px-0025Pikachu.png',
+    id: 25
   }
-  */
-  
+
 
   return ( <>
   <GlobalStyles/>
     <FlexContainer>
       {/* Aqui neste componente, passe as props. Lembre-se que também é possivel passar a função de setState via props! */}
-      <PokemonCard/>
+      <PokemonCard pokemon = {squirtle} evolucaoPokemon = {setSquirtle} evolucao = {evolucaoSquirtle}/>
+      <PokemonCard pokemon = {pichu} evolucaoPokemon = {setPichu} evolucao = {evolucaoPichu}/>
       {/* Crie aqui seus próximos pokemons! */}
     </FlexContainer>
   </>
